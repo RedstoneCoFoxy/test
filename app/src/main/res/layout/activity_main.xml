@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/Key1"
+        android:id="@+id/key1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
