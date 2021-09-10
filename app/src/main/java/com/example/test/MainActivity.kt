@@ -26,109 +26,134 @@ class MainActivity : AppCompatActivity() {
         val buttonKey8: Button = findViewById(R.id.key8)
         val buttonKey9: Button = findViewById(R.id.key9)
         val buttonKey0: Button = findViewById(R.id.key0)
+
         val buttonAdding: Button = findViewById(R.id.buttonADD)
         val buttonRetracting: Button = findViewById(R.id.buttonRETRACT)
         val buttonFinished: Button = findViewById(R.id.buttonFinish)
+        val buttonReseter: Button = findViewById(R.id.buttonReset)
+
         val Wyswietlam: TextView = findViewById(R.id.Wyswietlacz)
+        val WyswietlamLicz1: TextView = findViewById(R.id.Licz1Text)
+        val WyswietlamLicz2: TextView = findViewById(R.id.Licz2Text)
 
         buttonKey1.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"1"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"1"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey2.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"2"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"2"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey3.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"3"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"3"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey4.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"4"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"4"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey5.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"5"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"5"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey6.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"6"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"6"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey7.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"7"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"7"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey8.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"8"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"8"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey9.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"9"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"9"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonKey0.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"0"
                 Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
             }
             if(stan!=0){
                 liczba2=liczba2+"0"
                 Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
         buttonAdding.setOnClickListener {
@@ -140,11 +165,19 @@ class MainActivity : AppCompatActivity() {
             Wyswietlam.text="-"
         }
         buttonFinished.setOnClickListener {
-            val wyn1 = parseInt(liczba1,10)
-            val wyn2 = parseInt(liczba2,10)
+            var wyn1 = parseInt(liczba1,10)
+            var wyn2 = parseInt(liczba2,10)
             if(stan==1){wynik=wyn1+wyn2;};
             if(stan==2){wynik=wyn1-wyn2;};
             Wyswietlam.text= wynik.toString()
+        }
+        buttonReseter.setOnClickListener {
+            liczba1=""
+            liczba2=""
+            stan=0
+            WyswietlamLicz2.text=liczba2
+            WyswietlamLicz1.text=liczba1
+            Wyswietlam.text="---"
         }
 
     }//////////sdbhu
