@@ -4,15 +4,17 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import java.lang.Integer.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var liczba1=" ";
-        var liczba2=" ";
+        var liczba1="";
+        var liczba2="";
         var stan=0;
+        var wynik=0;
 
         val buttonKey1: Button = findViewById(R.id.key1)
         val buttonKey2: Button = findViewById(R.id.key2)
@@ -127,7 +129,17 @@ class MainActivity : AppCompatActivity() {
                 liczba2=liczba2+"0"
                 Wyswietlam.text=liczba2
             }
-
         };//Koniec Click
-    }
+        buttonAdding.setOnClickListener {
+            stan=1;
+            Wyswietlam.text="+"
+        }
+        buttonFinished.setOnClickListener {
+            val wyn1 = parseInt(liczba1,10)
+            val wyn2 = parseInt(liczba2,10)
+            wynik=wyn1+wyn2;
+            Wyswietlam.text= wynik.toString()
+        }
+
+    }//////////sdbhu
 }
