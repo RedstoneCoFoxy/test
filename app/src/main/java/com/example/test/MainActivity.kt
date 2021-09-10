@@ -24,16 +24,110 @@ class MainActivity : AppCompatActivity() {
         val buttonKey8: Button = findViewById(R.id.key8)
         val buttonKey9: Button = findViewById(R.id.key9)
         val buttonKey0: Button = findViewById(R.id.key0)
+        val buttonAdding: Button = findViewById(R.id.buttonADD)
+        val buttonFinished: Button = findViewById(R.id.buttonFinish)
         val Wyswietlam: TextView = findViewById(R.id.Wyswietlacz)
 
         buttonKey1.setOnClickListener {
             if(stan==0){
                 liczba1=liczba1+"1"
+                Wyswietlam.text=liczba1
             }
             if(stan==1){
                 liczba2=liczba2+"1"
+                Wyswietlam.text=liczba2
             }
-            Wyswietlam.text=liczba1;
-        };
+        };//Koniec Click
+        buttonKey2.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"2"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"2"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey3.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"3"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"3"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey4.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"4"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"4"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey5.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"5"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"5"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey6.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"6"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"6"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey7.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"7"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"7"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey8.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"8"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"8"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey9.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"9"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"9"
+                Wyswietlam.text=liczba2
+            }
+        };//Koniec Click
+        buttonKey0.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"0"
+                Wyswietlam.text=liczba1
+            }
+            if(stan==1){
+                liczba2=liczba2+"0"
+                Wyswietlam.text=liczba2
+            }
+
+        };//Koniec Click
     }
 }
