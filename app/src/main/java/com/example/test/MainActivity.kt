@@ -27,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val buttonKey9: Button = findViewById(R.id.key9)
         val buttonKey0: Button = findViewById(R.id.key0)
         val buttonAdding: Button = findViewById(R.id.buttonADD)
+        val buttonRetracting: Button = findViewById(R.id.buttonRETRACT)
         val buttonFinished: Button = findViewById(R.id.buttonFinish)
         val Wyswietlam: TextView = findViewById(R.id.Wyswietlacz)
 
@@ -35,7 +36,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"1"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"1"
                 Wyswietlam.text=liczba2
             }
@@ -45,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"2"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"2"
                 Wyswietlam.text=liczba2
             }
@@ -55,7 +56,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"3"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"3"
                 Wyswietlam.text=liczba2
             }
@@ -65,7 +66,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"4"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"4"
                 Wyswietlam.text=liczba2
             }
@@ -75,7 +76,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"5"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"5"
                 Wyswietlam.text=liczba2
             }
@@ -85,7 +86,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"6"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"6"
                 Wyswietlam.text=liczba2
             }
@@ -95,7 +96,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"7"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"7"
                 Wyswietlam.text=liczba2
             }
@@ -105,7 +106,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"8"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"8"
                 Wyswietlam.text=liczba2
             }
@@ -115,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"9"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"9"
                 Wyswietlam.text=liczba2
             }
@@ -125,7 +126,7 @@ class MainActivity : AppCompatActivity() {
                 liczba1=liczba1+"0"
                 Wyswietlam.text=liczba1
             }
-            if(stan==1){
+            if(stan!=0){
                 liczba2=liczba2+"0"
                 Wyswietlam.text=liczba2
             }
@@ -134,10 +135,15 @@ class MainActivity : AppCompatActivity() {
             stan=1;
             Wyswietlam.text="+"
         }
+        buttonRetracting.setOnClickListener {
+            stan=2;
+            Wyswietlam.text="-"
+        }
         buttonFinished.setOnClickListener {
             val wyn1 = parseInt(liczba1,10)
             val wyn2 = parseInt(liczba2,10)
-            wynik=wyn1+wyn2;
+            if(stan==1){wynik=wyn1+wyn2;};
+            if(stan==2){wynik=wyn1-wyn2;};
             Wyswietlam.text= wynik.toString()
         }
 

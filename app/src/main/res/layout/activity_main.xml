@@ -147,15 +147,28 @@
         app:layout_constraintVertical_bias="0.263" />
 
     <Button
+        android:id="@+id/buttonRETRACT"
+        android:layout_width="149dp"
+        android:layout_height="37dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.557" />
+
+    <Button
         android:id="@+id/buttonADD"
-        android:layout_width="212dp"
-        android:layout_height="48dp"
+        android:layout_width="149dp"
+        android:layout_height="37dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.17"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.559" />
+        app:layout_constraintVertical_bias="0.557" />
 
     <Button
         android:id="@+id/buttonFinish"
