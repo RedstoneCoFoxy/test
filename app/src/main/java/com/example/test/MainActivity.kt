@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
+import java.lang.Float.parseFloat
 import java.lang.Integer.*
 
 class MainActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         var liczba1="";
         var liczba2="";
         var stan=0;
-        var wynik=0;
+        var wynik=2.7182818284f;
 
         val buttonKey1: Button = findViewById(R.id.key1)
         val buttonKey2: Button = findViewById(R.id.key2)
@@ -26,6 +27,7 @@ class MainActivity : AppCompatActivity() {
         val buttonKey8: Button = findViewById(R.id.key8)
         val buttonKey9: Button = findViewById(R.id.key9)
         val buttonKey0: Button = findViewById(R.id.key0)
+        val buttonKeyDot: Button = findViewById(R.id.keyDot)
 
         val buttonAdding: Button = findViewById(R.id.buttonADD)
         val buttonRetracting: Button = findViewById(R.id.buttonRETRACT)
@@ -156,6 +158,19 @@ class MainActivity : AppCompatActivity() {
                 WyswietlamLicz2.text=liczba2
             }
         };//Koniec Click
+        buttonKeyDot.setOnClickListener {
+            if(stan==0){
+                liczba1=liczba1+"."
+                Wyswietlam.text=liczba1
+                WyswietlamLicz1.text=liczba1
+            }
+            if(stan!=0){
+                liczba2=liczba2+"."
+                Wyswietlam.text=liczba2
+                WyswietlamLicz2.text=liczba2
+            }
+        };//Koniec Click
+
         buttonAdding.setOnClickListener {
             stan=1;
             Wyswietlam.text="+"
@@ -165,8 +180,8 @@ class MainActivity : AppCompatActivity() {
             Wyswietlam.text="-"
         }
         buttonFinished.setOnClickListener {
-            var wyn1 = parseInt(liczba1,10)
-            var wyn2 = parseInt(liczba2,10)
+            var wyn1 = parseFloat(liczba1)
+            var wyn2 = parseFloat(liczba2)
             if(stan==1){wynik=wyn1+wyn2;};
             if(stan==2){wynik=wyn1-wyn2;};
             Wyswietlam.text= wynik.toString()
