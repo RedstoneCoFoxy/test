@@ -6,6 +6,7 @@ import android.widget.Button
 import android.widget.TextView
 import java.lang.Float.parseFloat
 import java.lang.Integer.*
+import java.lang.Math.*
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -31,6 +32,8 @@ class MainActivity : AppCompatActivity() {
 
         val buttonAdding: Button = findViewById(R.id.buttonADD)
         val buttonRetracting: Button = findViewById(R.id.buttonRETRACT)
+        val buttonMultiplying: Button = findViewById(R.id.buttonMULTIPLY)
+        val buttonDividing: Button = findViewById(R.id.buttonDIVIDE)
         val buttonFinished: Button = findViewById(R.id.buttonFinish)
         val buttonReseter: Button = findViewById(R.id.buttonReset)
 
@@ -179,12 +182,27 @@ class MainActivity : AppCompatActivity() {
             stan=2;
             Wyswietlam.text="-"
         }
+        buttonMultiplying.setOnClickListener {
+            stan=3;
+            Wyswietlam.text="*"
+        }
+        buttonDividing.setOnClickListener {
+            stan=4;
+            Wyswietlam.text="/"
+        }
         buttonFinished.setOnClickListener {
             var wyn1 = parseFloat(liczba1)
             var wyn2 = parseFloat(liczba2)
+
+            if(stan==4 && wyn2 == 0.0f){
+                Wyswietlam.text= "ERROR"
+            }else{
             if(stan==1){wynik=wyn1+wyn2;};
             if(stan==2){wynik=wyn1-wyn2;};
+            if(stan==3){wynik=wyn1*wyn2;};
+            if(stan==4){wynik=wyn1/wyn2;};
             Wyswietlam.text= wynik.toString()
+            }
         }
         buttonReseter.setOnClickListener {
             liczba1=""
