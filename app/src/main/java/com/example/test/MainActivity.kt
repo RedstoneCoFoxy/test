@@ -202,6 +202,10 @@ class MainActivity : AppCompatActivity() {
             if(stan==3){wynik=wyn1*wyn2;};
             if(stan==4){wynik=wyn1/wyn2;};
             Wyswietlam.text= wynik.toString()
+            liczba1=wynik.toString()
+            liczba2=""
+            WyswietlamLicz2.text=liczba2
+            WyswietlamLicz1.text=liczba1
             }
         }
         buttonReseter.setOnClickListener {
